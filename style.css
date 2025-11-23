@@ -22,14 +22,17 @@
      background-size: cover;
      background-position: center 25%;
  }
- .nav-link{
-    color: white;
+
+ .nav-link {
+     color: white;
  }
+
  .form-control::placeholder {
-    color: #999 !important;
-    opacity: 1;
-}
-.title-shrink{
-        word-wrap: break-word;
-    white-space: normal;
-}
+     color: #999 !important;
+     opacity: 1;
+ }
+
+ .title-shrink {
+     word-wrap: break-word;
+     white-space: normal;
+ }

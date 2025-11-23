@@ -40,21 +40,22 @@ var people = [
         "picture": "images/artwork5.jpg",
         "year": "1570–1571",
         "medium": "Oil on panel"
-    }, {
+    },
+    {
         "title": "Monsignor della Casa",
         "artist": "Pontormo",
         "picture": "images/artwork2.jpg",
         "year": "probably 1541/1544",
         "medium": "Oil on panel"
     },
-
     {
         "title": "Seated Nymph",
         "artist": "Antico",
         "picture": "images/artwork11.jpg",
         "year": "1503",
         "medium": "Bronze with mercury gilding on drapery and hair, silvering and silver foil in the eyes"
-    },{
+    },
+    {
         "title": "Putto Poised on a Globe",
         "artist": "Andrea del Verrocchio",
         "picture": "images/artwork9.jpg",
@@ -70,14 +71,13 @@ var people = [
     },
 
 
-     {
+    {
         "title": "Saint Luke",
         "artist": "Giorgio Vasari",
         "picture": "images/artwork4.jpg",
         "year": "1570–1571",
         "medium": "Oil on panel"
     },
-
     {
         "title": "Summer",
         "artist": "Jacopo Tintoretto",

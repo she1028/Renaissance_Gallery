@@ -46,10 +46,6 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">artwork</a></li>
-                            <!-- <li><a class="dropdown-item" href="#">Leonardo Da Vinci</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li> -->
                             <li><a class="dropdown-item" href="#">Sculpture</a></li>
                         </ul>
 
@@ -76,18 +72,18 @@
             </div>
         </div>
     </div>
-<section id="Gallery">
-    <div class="container-fluid bg-dark">
-        <div class="container mt-5">
-            <div class="row g-5 justify-content-center text-center" id="containerRow">
+    <section id="Gallery">
+        <div class="container-fluid bg-dark">
+            <div class="container mt-5">
+                <div class="row g-5 justify-content-center text-center" id="containerRow">
 
-                <script src="data.js"></script>
+                    <script src="data.js"></script>
 
-                <script>
-                    var containerRow = document.getElementById("containerRow");
+                    <script>
+                        var containerRow = document.getElementById("containerRow");
 
-                    for (var i = 0; i < people.length; i++) {
-                        containerRow.innerHTML += `
+                        for (var i = 0; i < people.length; i++) {
+                            containerRow.innerHTML += `
                         <div class="col-lg-3 col-md-5 col-10">
                             <div class="card">
                                 <img src="` + people[i].picture + `" class="card-img-top" id="img-` + i + `">
@@ -100,67 +96,24 @@
                                 </div>
                             </div>
                         </div>`;
-                    }
-
-                    // Move the function outside the loop
-                    function openFull(imgid) {
-                        var img = document.getElementById(imgid);
-                        if (img.requestFullscreen) {
-                            img.requestFullscreen();
-                        } else if (img.webkitRequestFullscreen) { // Safari
-                            img.webkitRequestFullscreen();
-                        } else if (img.msRequestFullscreen) { // IE11
-                            img.msRequestFullscreen();
                         }
-                    }
-                </script>
 
+                        function openFull(imgid) {
+                            var img = document.getElementById(imgid);
+                            if (img.requestFullscreen) {
+                                img.requestFullscreen();
+                            } else if (img.webkitRequestFullscreen) {
+                                img.webkitRequestFullscreen();
+                            } else if (img.msRequestFullscreen) {
+                                img.msRequestFullscreen();
+                            }
+                        }
+                    </script>
+
+                </div>
             </div>
         </div>
-    </div>
-</section>
-
-
-
-//     <!-- <section id="Gallery">
-//   <div class="container-fluid bg-dark">
-//     <div class="container mt-5">
-//       <div class="row g-5 justify-content-center text-center" id="containerRow">
-//       </div>
-//     </div>
-//   </div>
-// </section>
-
-// <script src="data.js"></script>
-// <script>
-// const containerRow = document.getElementById("containerRow");
-
-// people.forEach((item, index) => {
-//   containerRow.innerHTML += `
-//     <div class="col-lg-3 col-md-5 col-10">
-//       <div class="card">
-//         <img src="${item.picture}" class="card-img-top" id="img-${index}">
-//         <div class="card-body">
-//           <h5 class="card-title">${item.title}</h5>
-//           <p><b>Artist: </b>${item.artist}</p>
-//           <p><b>Year: </b>${item.year}</p>
-//           <p><b>Medium: </b>${item.medium}</p>
-//           <button class="btn btn-primary mt-4" onclick="openFull('img-${index}')">View Full Screen</button>
-//         </div>
-//       </div>
-//     </div>
-//   `;
-// });
-
-// function openFull(imgid) {
-//   const img = document.getElementById(imgid);
-//   if (img.requestFullscreen) {
-//     img.requestFullscreen();
-//   }
-// }
-// </script> -->
-
-
+    </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
