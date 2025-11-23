@@ -18,7 +18,7 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top py-3">
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark fixed-top py-3" style="transition: top 0.3s;">
         <div class="container-fluid px-5">
 
             <!-- BRAND + TOGGLER WRAPPER -->
@@ -45,12 +45,12 @@
                             Art/Artist
                         </a>
                         <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Giovanni Battista Moroni</a></li>
-                            <li><a class="dropdown-item" href="#">Leonardo Da Vinci</a></li>
+                            <li><a class="dropdown-item" href="#">artwork</a></li>
+                            <!-- <li><a class="dropdown-item" href="#">Leonardo Da Vinci</a></li>
                             <li>
                                 <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </li> -->
+                            <li><a class="dropdown-item" href="#">Sculpture</a></li>
                         </ul>
 
                 </ul>
@@ -63,9 +63,103 @@
         </div>
     </nav>
 
-    <div class="container-fluid main-pic pb-5">
 
+    <div class="container-fluid main-pic pb-5">
+        <div class="row">
+            <div class="col-lg-4 col-md-5 col-10 px-5 mx-5">
+
+
+                <div class="align-items-center text-light fs-5" style="padding-top: 15em;">The Renaissance (c.
+                    1400–1600) was a cultural revival in Italy, inspired by Ancient Greece and Rome. Artists and
+                    thinkers celebrated the human body and mind, while Florence led the movement, fueling demand for art
+                    in churches and homes.</div>
+            </div>
+        </div>
     </div>
+<section id="Gallery">
+    <div class="container-fluid bg-dark">
+        <div class="container mt-5">
+            <div class="row g-5 justify-content-center text-center" id="containerRow">
+
+                <script src="data.js"></script>
+
+                <script>
+                    var containerRow = document.getElementById("containerRow");
+
+                    for (var i = 0; i < people.length; i++) {
+                        containerRow.innerHTML += `
+                        <div class="col-lg-3 col-md-5 col-10">
+                            <div class="card">
+                                <img src="` + people[i].picture + `" class="card-img-top" id="img-` + i + `">
+                                <div class="card-body">
+                                    <h5 class="card-title">` + people[i].title + `</h5>
+                                    <p><b>Artist: </b>` + people[i].artist + `</p>
+                                    <p><b>Year: </b>` + people[i].year + `</p>
+                                    <p><b>Medium: </b>` + people[i].medium + `</p>
+                                    <button class="btn btn-primary mt-4" onclick="openFull('img-` + i + `')">View Full Screen</button>
+                                </div>
+                            </div>
+                        </div>`;
+                    }
+
+                    // Move the function outside the loop
+                    function openFull(imgid) {
+                        var img = document.getElementById(imgid);
+                        if (img.requestFullscreen) {
+                            img.requestFullscreen();
+                        } else if (img.webkitRequestFullscreen) { // Safari
+                            img.webkitRequestFullscreen();
+                        } else if (img.msRequestFullscreen) { // IE11
+                            img.msRequestFullscreen();
+                        }
+                    }
+                </script>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+//     <!-- <section id="Gallery">
+//   <div class="container-fluid bg-dark">
+//     <div class="container mt-5">
+//       <div class="row g-5 justify-content-center text-center" id="containerRow">
+//       </div>
+//     </div>
+//   </div>
+// </section>
+
+// <script src="data.js"></script>
+// <script>
+// const containerRow = document.getElementById("containerRow");
+
+// people.forEach((item, index) => {
+//   containerRow.innerHTML += `
+//     <div class="col-lg-3 col-md-5 col-10">
+//       <div class="card">
+//         <img src="${item.picture}" class="card-img-top" id="img-${index}">
+//         <div class="card-body">
+//           <h5 class="card-title">${item.title}</h5>
+//           <p><b>Artist: </b>${item.artist}</p>
+//           <p><b>Year: </b>${item.year}</p>
+//           <p><b>Medium: </b>${item.medium}</p>
+//           <button class="btn btn-primary mt-4" onclick="openFull('img-${index}')">View Full Screen</button>
+//         </div>
+//       </div>
+//     </div>
+//   `;
+// });
+
+// function openFull(imgid) {
+//   const img = document.getElementById(imgid);
+//   if (img.requestFullscreen) {
+//     img.requestFullscreen();
+//   }
+// }
+// </script> -->
+
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
