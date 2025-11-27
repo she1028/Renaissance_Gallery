@@ -18,8 +18,11 @@
      backdrop-filter: blur(5px);
  }
 
- .nav-link {
+ .nav-link{
      color: white;
+ }
+  .nav-link:hover{
+     color: orangered;
  }
 
  .form-control::placeholder {
@@ -70,27 +73,24 @@
  .card-holder:hover .explore-text {
      background-color: rgba(0, 0, 0, 0.6);
  }
-
- /* .explore-text {
-     pointer-events: auto;
- } */
-
  .view-gallery {
      background-color: rgb(6, 23, 15);
      font-family: 'Open Sans', sans-serif;
  }
+ .view-gallery:hover{
+    transform: scale(0.9);
+ }
  .fade-on-scroll {
     opacity: 0;
     transform: translateY(50px);
-    transition: opacity 2s ease, transform 2s ease;
+    transition: opacity 1s ease, transform 1s ease;
 }
 
 .fade-on-scroll.visible {
     opacity: 1;
     transform: translateY(0);
 }
-
- @media (max-width: 990px) {
+ @media (max-width: 1000px) {
      .home-pic {
          margin-top: 7em;
      }

@@ -12,43 +12,31 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/logo.png">
 </head>
 
 <body>
 
     <!-- NavBar -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 shadow border-buttom border-3">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top py-3 shadow border-buttom border-3">
         <div class="container-fluid px-5">
             <div class="d-flex align-items-center w-100 justify-content-between">
                 <a class="navbar-brand text-light title-shrink" href="#home">
                     <img src="images/logo.png" style="width: 3.5em;">
                 </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll"
-                    aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
             </div>
-            <div class="collapse navbar-collapse" id="navbarScroll">
-                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
-                    <li class="nav-item">
-                        <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
-                    </li>
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle nav-link" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            Art/Artist
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">artwork</a></li>
-                            <li><a class="dropdown-item" href="#">Sculpture</a></li>
-                        </ul>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto my-2 my-lg-0" style="--bs-scroll-height: 100px;">
+                    <li><a class="nav-link" aria-current="page" href="#home">Home</a></li>
+                    <li><a class="nav-link" aria-current="page" href="#artwork">Artwork</a></li>
+                    <li><a class="nav-link" aria-current="page" href="#sculpture">Sculpture</a></li>
+                    <li><a class="nav-link" aria-current="page" href="#artists">Artists</a></li>
+                    <li><a class="nav-link text-dark text-center px-2 py-1 bg-light rounded-5" aria-current="page"
+                            href="https://www.nga.gov/artworks/italian-renaissance">Museum</a></li>
                 </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2 bg-dark text-light" type="search" placeholder="Search"
-                        aria-label="Search" />
-                    <button class="btn btn-outline-success" type="submit"><i class="fas fa-search"></i></button>
-                </form>
             </div>
         </div>
     </nav>
@@ -80,23 +68,21 @@
                                     <a class="view-gallery col-xxl-5 col-xl-4 col-lg-5 col-xs-6 view-my-work rounded-5 px-4 py-2 mt-3 text-white text-decoration-none text-center"
                                         href="view-gallery.html" target="_blank">
                                         View Gallery</a>
-
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
                 <div class="col-xxl-4 col-xl-4 col-lg-5 col-md-8 col-sm-8 text-center order-1 order-md-1 order-lg-2 picture1 p-5 shadow-lg rounded-0 home-pic"
                     style="overflow: hidden; background-color: rgb(3, 11, 7); border: 5px solid rgb(88, 77, 2);">
-                    <img src="images/artwork4.jpg" class="img-fluid shadow-lg w-100 " alt="Responsive image">
+                    <img src="images/HA4.jpg" class="img-fluid shadow-lg w-100 " alt="Responsive image">
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Artwork Gallery -->
-    <section id="Gallery">
+    <section id="artwork">
         <div class="container-fluid bg-dark gallery-section pb-5">
             <div class="display-3 text-light text-center" style="font-family: 'EB+Garamond';">
                 The <span class="display-1 fw-bold" style="color: #d59d2a">R</span>enaissance Artworks
@@ -109,31 +95,31 @@
                     <script>
                         var containerRow = document.getElementById("containerRow");
 
-                        for (var i = 0; i < people.length; i++) {
+                        for (var i = 0; i < artwork.length; i++) {
                             containerRow.innerHTML += `
-                            <div class="col-xxl-4 col-md-5 col-11 mt-5 fade-on-scroll">
-                            <div class="card p-1 bg-light card-holder border-0 position-relative overflow-hidden" style="height: 32em;">
-                                <button class="btn btn-light position-absolute top-0 end-0 m-2 px-3 rounded-5">
-                                    <i class="fas fa-expand"></i>
-                                </button>
-                                <img src="` + people[i].picture + `" class="card-img" alt="Artwork" id="artwork-` + i + `">
-  
-                                <div class="card-img-overlay d-flex flex-column justify-content-end text-white text-start bg-dark bg-opacity-50">
-                                <h5 class="fw-bold" style="color: #d59d2a ">` + people[i].title + `</h5>
+                                <div class="col-xxl-4 col-md-5 col-11 mt-5 ">
+                                <div class="card p-1 bg-light card-holder border-0 position-relative overflow-hidden fade-on-scroll">
+                                    <button class="btn btn-light position-absolute top-0 end-0 m-2 px-3 rounded-5">
+                                        <i class="fas fa-expand"></i>
+                                    </button>
+                                    <img src="` + artwork[i].picture + `" class="card-img" id="artwork-` + i + `" alt="Artwork" style="height: auto; width: 100%;">
+                                    
+                                    <div class="card-img-overlay d-flex flex-column justify-content-end text-white text-start bg-dark bg-opacity-50">
+                                    <h5 class="fw-bold" style="color: #d59d2a ">` + artwork[i].title + `</h5>
 
-                                <div class="small">
-                                    <b>Artist: </b>` + people[i].artist + `<br>
-                                    <b>Year: </b>` + people[i].year + `<br>
-                                    <b>Medium: </b>` + people[i].medium + `
+                                    <div class="small">
+                                        <b>Artist: </b>` + artwork[i].artist + `<br>
+                                        <b>Year: </b>` + artwork[i].year + `<br>
+                                        <b>Medium: </b>` + artwork[i].medium + `
+                                    </div>
+
+                                    <button class="btn btn-dark position-absolute top-0 end-0 m-2 px-3 rounded-5" onclick="openFull('artwork-` + i + `')">
+                                        <i class="fas fa-expand"></i>
+                                    </button>
+
+                                    </div>
                                 </div>
-
-                                <button class="btn btn-dark position-absolute top-0 end-0 m-2 px-3 rounded-5" onclick="openFull('artwork-` + i + `')">
-                                    <i class="fas fa-expand"></i>
-                                </button>
-
-                                </div>
-                            </div>
-                            </div>`
+                                </div>`
                         }
                         function openFull(artworkid) {
                             var img = document.getElementById(artworkid);
@@ -160,7 +146,7 @@
                 style="backdrop-filter: blur(3px); background-color: rgba(32, 32, 32, 0.5); position: absolute; inset: 0; z-index:-1;">
             </div>
             <div class="display-3 text-light text-center" style="font-family: 'EB+Garamond';">
-                The <span class="display-1 fw-bold" style="color: #d59d2a">R</span>enaissance Scuptures
+                The <span class="display-1 fw-bold" style="color: #d59d2a">R</span>enaissance Sculptures
             </div>
             <div class="container">
                 <div class="row g-3 justify-content-center text-center" id="sculptureRow">
@@ -169,23 +155,22 @@
 
                     <script>
                         var sculptureRow = document.getElementById("sculptureRow");
-
                         for (var i = 0; i < sculpture.length; i++) {
                             sculptureRow.innerHTML += `
-                        <div class="col-xxl-3 col-md-5 col-11 mt-5 fade-on-scroll">
-                            <div class="card card-holder p-1 bg-light border-0 position-relative overflow-hidden" style="height: 25em">
-                                 <button class="btn btn-light position-absolute top-0 end-0 m-2 px-3 rounded-5">
-                                    <i class="fas fa-expand"></i>
-                                </button>
-                                <img src="` + sculpture[i].picture + `" class="card-img" alt="Sculpture" id="sculpture-` + i + `">
+                            <div class="col-xxl-3 col-md-5 col-11 mt-5">
+                                <div class="card card-holder p-1 bg-light border-0 position-relative overflow-hidden fade-on-scroll">
+                                    <button class="btn btn-light position-absolute top-0 end-0 m-2 px-3 rounded-5">
+                                        <i class="fas fa-expand"></i>
+                                    </button>
+                                    <img src="` + sculpture[i].picture + `" class="card-img" alt="Sculpture" id="sculpture-` + i + `">
 
-                                <div class="card-img-overlay d-flex flex-column justify-content-end text-white text-start bg-dark bg-opacity-50 explore-text">
-                                    <h5 class="fw-bold" style="color: #d59d2a">` + sculpture[i].title + `</h5>
-                                    <div class="small">
-                                        <b>Artist: </b>` + sculpture[i].artist + `<br>
-                                        <b>Year: </b>` + sculpture[i].year + `<br>
-                                        <b>Medium: </b>` + sculpture[i].medium + `
-                                    </div>
+                                    <div class="card-img-overlay d-flex flex-column justify-content-end text-white text-start bg-dark bg-opacity-50 explore-text">
+                                        <h5 class="fw-bold" style="color: #d59d2a">` + sculpture[i].title + `</h5>
+                                        <div class="small">
+                                            <b>Artist: </b>` + sculpture[i].artist + `<br>
+                                            <b>Year: </b>` + sculpture[i].year + `<br>
+                                            <b>Medium: </b>` + sculpture[i].medium + `
+                                        </div>
 
                                     <button class="btn btn-dark position-absolute top-0 end-0 m-2 px-3 rounded-5" onclick="openFull('sculpture-` + i + `')">
                                         <i class="fas fa-expand"></i>
@@ -210,7 +195,7 @@
             </div>
 
             <div class="container">
-                <div class="row justify-content-center justify-content-lg-end">
+                <div class="row justify-content-center">
                     <a class="view-gallery col-lg-3 col-5 view-my-work my-5 rounded-5 px-2 py-2 text-white text-decoration-none text-center"
                         href="view-gallery.html" target="_blank">
                         More details</a>
@@ -221,7 +206,7 @@
     </section>
 
     <!-- Artists Section -->
-    <section>
+    <section id="artists">
         <div class="container-fluid z-1 bg-dark shadow py-5">
 
             <div class="row">
@@ -237,23 +222,42 @@
                         <div class="carousel-inner">
 
                             </style>
-
                             <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
                                         <img src="images/3.jpg" class="d-block w-100" alt="white beach">
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <h5>Leonardo Da Vinci</h5>
+                                            <p>1452-1519</p>
+                                        </div>
                                     </div>
                                     <div class="carousel-item">
                                         <img src="images/1.jpg" class="d-block w-100" alt="woman kayaking">
+                                        <div class="carousel-caption d-none d-md-block p-1 bg-dark text-light">
+                                            <h5>Lucas Cranach the Elder</h5>
+                                            <p>1472–1553</p>
+                                        </div>
                                     </div>
                                     <div class="carousel-item">
                                         <img src="images/2.jpg" class="d-block w-100" alt="A boat on the shore">
+                                        <div class="carousel-caption d-none d-md-block p-1 bg-dark text-light">
+                                            <h5>Raphael</h5>
+                                            <p>1483–1520</p>
+                                        </div>
                                     </div>
                                     <div class="carousel-item">
                                         <img src="images/4.jpg" class="d-block w-100" alt="woman swimming">
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <h5>Titian</h5>
+                                            <p>–1576</p>
+                                        </div>
                                     </div>
                                     <div class="carousel-item">
                                         <img src="images/5.jpg" class="d-block w-100" alt="white beach">
+                                        <div class="carousel-caption d-none d-md-block">
+                                            <h5>Michelangelo</h5>
+                                            <p>1475–1564</p>
+                                        </div>
                                     </div>
                                 </div>
 
@@ -266,23 +270,42 @@
                                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                 </button>
                             </div>
-
-
-                            <button class="carousel-control-prev" type="button"
-                                data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Previous</span>
-                            </button>
-                            <button class="carousel-control-next" type="button"
-                                data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
-                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                <span class="visually-hidden">Next</span>
-                            </button>
                         </div>
                     </div>
 
                 </div>
     </section>
+
+    <!-- Footer Section -->
+    <section>
+    <div class="container-fluid h-50 p-2 m-0" style="background-color: rgb(17, 17, 17);">
+      <div class="row mx-5 g-5 text-center justify-content-center py-3">
+        <div class="col-lg-4 col-11">
+          <img src="images/logo.png" class="w-25">
+          <p class="text-light text-left">
+               <div>
+      <hr class="mx-5" style="border: 1px solid white;">
+      <p class="text-center pb-3" style="color: #676767;">&copy; 2025 Shella May Cuenca | National Gallery of Arts. All rights reserved.</p>
+    </div>
+          </p>
+        </div>
+        <div class="col-lg-4 col-11">
+                <ul class="navbar-nav me-auto my-2 my-lg-0" style="--bs-scroll-height: 100px;">
+                    <li><a class="nav-link" aria-current="page" href="#home">Home</a></li>
+                    <li><a class="nav-link" aria-current="page" href="#artwork">Artwork</a></li>
+                    <li><a class="nav-link" aria-current="page" href="#sculpture">Sculpture</a></li>
+                    <li><a class="nav-link" aria-current="page" href="#artists">Artists</a></li>
+                    <li><a class="nav-link text-dark text-center px-2 py-1 bg-light rounded-5" aria-current="page"
+                            href="https://www.nga.gov/artworks/italian-renaissance">Museum</a></li>
+                </ul>   
+      </div>
+      <!-- <div>
+      <hr class="mx-5" style="border: 1px solid white;">
+      <p class="text-center pb-3" style="color: #676767;">&copy; 2025 Shella May Cuenca. All rights reserved.</p>
+    </div> -->
+
+
+  </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
