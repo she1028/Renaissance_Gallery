@@ -6,7 +6,7 @@ var artwork = [
         "year": "c. 1506",
         "medium": "Oil on panel",
         "category": "artwork",
-         "description": "A dramatic Renaissance scene of Saint George heroically defeating a dragon, symbolizing the triumph of good over evil."
+        "description": "A dramatic Renaissance scene of Saint George heroically defeating a dragon, symbolizing the triumph of good over evil."
     },
     {
         "title": "A Young Woman and Her Little Boy",
@@ -33,7 +33,7 @@ var artwork = [
         "year": "c. 1445/1450",
         "medium": "Tempera on panel",
         "category": "artwork",
-         "description": "A serene depiction of John the Baptist in a radiant landscape, showcasing early Renaissance clarity and soft color."
+        "description": "A serene depiction of John the Baptist in a radiant landscape, showcasing early Renaissance clarity and soft color."
     },
     {
         "title": "Saint Luke",
@@ -104,7 +104,7 @@ var all = [
         "year": "c. 1506",
         "medium": "Oil on panel",
         "category": "artwork",
-         "description": "A dramatic Renaissance scene of Saint George heroically defeating a dragon, symbolizing the triumph of good over evil."
+        "description": "A dramatic Renaissance scene of Saint George heroically defeating a dragon, symbolizing the triumph of good over evil."
     },
     {
         "title": "A Young Woman and Her Little Boy",
@@ -131,7 +131,7 @@ var all = [
         "year": "c. 1445/1450",
         "medium": "Tempera on panel",
         "category": "artwork",
-         "description": "A serene depiction of John the Baptist in a radiant landscape, showcasing early Renaissance clarity and soft color."
+        "description": "A serene depiction of John the Baptist in a radiant landscape, showcasing early Renaissance clarity and soft color."
     },
     {
         "title": "Saint Luke",

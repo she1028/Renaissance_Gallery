@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Gallery</title>
+    <title>Renaissance Gallery</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Oswald:wght@200..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
@@ -88,55 +88,11 @@
                 The <span class="display-1 fw-bold" style="color: #d59d2a">R</span>enaissance Artworks
             </div>
             <div class="container">
-                <div class="row g-3 justify-content-center text-center" id="containerRow">
-
-                    <script src="data.js"></script>
-
-                    <script>
-                        var containerRow = document.getElementById("containerRow");
-
-                        for (var i = 0; i < artwork.length; i++) {
-                            containerRow.innerHTML += `
-                                <div class="col-xxl-4 col-md-5 col-11 mt-5 ">
-                                <div class="card p-1 bg-light card-holder border-0 position-relative overflow-hidden fade-on-scroll">
-                                    <button class="btn btn-light position-absolute top-0 end-0 m-2 px-3 rounded-5">
-                                        <i class="fas fa-expand"></i>
-                                    </button>
-                                    <img src="` + artwork[i].picture + `" class="card-img" id="artwork-` + i + `" alt="Artwork" style="height: auto; width: 100%;">
-                                    
-                                    <div class="card-img-overlay d-flex flex-column justify-content-end text-white text-start bg-dark bg-opacity-50">
-                                    <h5 class="fw-bold" style="color: #d59d2a ">` + artwork[i].title + `</h5>
-
-                                    <div class="small">
-                                        <b>Artist: </b>` + artwork[i].artist + `<br>
-                                        <b>Year: </b>` + artwork[i].year + `<br>
-                                        <b>Medium: </b>` + artwork[i].medium + `
-                                    </div>
-
-                                    <button class="btn btn-dark position-absolute top-0 end-0 m-2 px-3 rounded-5" onclick="openFull('artwork-` + i + `')">
-                                        <i class="fas fa-expand"></i>
-                                    </button>
-
-                                    </div>
-                                </div>
-                                </div>`
-                        }
-                        function openFull(artworkid) {
-                            var img = document.getElementById(artworkid);
-                            if (img.requestFullscreen) {
-                                img.requestFullscreen();
-                            } else if (img.webkitRequestFullscreen) {
-                                img.webkitRequestFullscreen();
-                            } else if (img.msRequestFullscreen) {
-                                img.msRequestFullscreen();
-                            }
-                        }
-                    </script>
+                <div class="row g-3 justify-content-center text-center" id="artworkRow">
                 </div>
             </div>
         </div>
     </section>
-
 
     <!-- Sculpture Gallery -->
     <section id="sculpture">
@@ -150,47 +106,6 @@
             </div>
             <div class="container">
                 <div class="row g-3 justify-content-center text-center" id="sculptureRow">
-
-                    <script src="data.js"></script>
-
-                    <script>
-                        var sculptureRow = document.getElementById("sculptureRow");
-                        for (var i = 0; i < sculpture.length; i++) {
-                            sculptureRow.innerHTML += `
-                            <div class="col-xxl-3 col-md-5 col-11 mt-5">
-                                <div class="card card-holder p-1 bg-light border-0 position-relative overflow-hidden fade-on-scroll">
-                                    <button class="btn btn-light position-absolute top-0 end-0 m-2 px-3 rounded-5">
-                                        <i class="fas fa-expand"></i>
-                                    </button>
-                                    <img src="` + sculpture[i].picture + `" class="card-img" alt="Sculpture" id="sculpture-` + i + `">
-
-                                    <div class="card-img-overlay d-flex flex-column justify-content-end text-white text-start bg-dark bg-opacity-50 explore-text">
-                                        <h5 class="fw-bold" style="color: #d59d2a">` + sculpture[i].title + `</h5>
-                                        <div class="small">
-                                            <b>Artist: </b>` + sculpture[i].artist + `<br>
-                                            <b>Year: </b>` + sculpture[i].year + `<br>
-                                            <b>Medium: </b>` + sculpture[i].medium + `
-                                        </div>
-
-                                    <button class="btn btn-dark position-absolute top-0 end-0 m-2 px-3 rounded-5" onclick="openFull('sculpture-` + i + `')">
-                                        <i class="fas fa-expand"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>`
-                        }
-
-                        function openFull(sculptureid) {
-                            var img = document.getElementById(sculptureid);
-                            if (img.requestFullscreen) {
-                                img.requestFullscreen();
-                            } else if (img.webkitRequestFullscreen) {
-                                img.webkitRequestFullscreen();
-                            } else if (img.msRequestFullscreen) {
-                                img.msRequestFullscreen();
-                            }
-                        }
-                    </script>
                 </div>
             </div>
 
@@ -199,7 +114,6 @@
                     <a class="view-gallery col-lg-3 col-5 view-my-work my-5 rounded-5 px-2 py-2 text-white text-decoration-none text-center"
                         href="view-gallery.html" target="_blank">
                         More details</a>
-
                 </div>
             </div>
         </div>
@@ -221,7 +135,6 @@
                     <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false">
                         <div class="carousel-inner">
 
-                            </style>
                             <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
@@ -272,48 +185,123 @@
                             </div>
                         </div>
                     </div>
-
                 </div>
     </section>
 
     <!-- Footer Section -->
     <section>
-    <div class="container-fluid h-50 p-2 m-0" style="background-color: rgb(17, 17, 17);">
-      <div class="row mx-5 g-5 text-center justify-content-center py-3">
-        <div class="col-lg-4 col-11">
-          <img src="images/logo.png" class="w-25">
-          <p class="text-light text-left">
-               <div>
-      <hr class="mx-5" style="border: 1px solid white;">
-      <p class="text-center pb-3" style="color: #676767;">&copy; 2025 Shella May Cuenca | National Gallery of Arts. All rights reserved.</p>
-    </div>
-          </p>
-        </div>
-        <div class="col-lg-4 col-11">
-                <ul class="navbar-nav me-auto my-2 my-lg-0" style="--bs-scroll-height: 100px;">
-                    <li><a class="nav-link" aria-current="page" href="#home">Home</a></li>
-                    <li><a class="nav-link" aria-current="page" href="#artwork">Artwork</a></li>
-                    <li><a class="nav-link" aria-current="page" href="#sculpture">Sculpture</a></li>
-                    <li><a class="nav-link" aria-current="page" href="#artists">Artists</a></li>
-                    <li><a class="nav-link text-dark text-center px-2 py-1 bg-light rounded-5" aria-current="page"
-                            href="https://www.nga.gov/artworks/italian-renaissance">Museum</a></li>
-                </ul>   
-      </div>
-      <!-- <div>
-      <hr class="mx-5" style="border: 1px solid white;">
-      <p class="text-center pb-3" style="color: #676767;">&copy; 2025 Shella May Cuenca. All rights reserved.</p>
-    </div> -->
+        <div class="container-fluid h-50 p-2 m-0" style="background-color: rgb(17, 17, 17);">
+            <div class="row mx-5 g-5 text-center justify-content-center align-items-center py-3">
+    
+                <div class="col-lg-4 col-11">
+                    <div class="fs-3 text-light fw-bold">Explore</div>
+                    <ul class="navbar-nav me-auto my-2 my-lg-0" style="--bs-scroll-height: 100px;">
+                        <li><a class="nav-link" aria-current="page"
+                                href="https://www.nga.gov/stories/articles/four-paintings-speak-each-other-across-space-and-time">Interactive
+                                Articles</a></li>
+                        <li><a class="nav-link" aria-current="page"
+                                href="https://www.nga.gov/stories/videos/blood-joining-blood-immersive-caravaggios-malta">Video</a>
+                        </li>
+                        <li><a class="nav-link" aria-current="page"
+                                href="https://www.nga.gov/artworks/italian-renaissance">Museum</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-11">
+                    <img src="images/logo.png" class="w-25">
+                    <div class="text-light text-left">
+                        <div>
+                            <hr class="mx-5" style="border: 1px solid white;">
+                            <div class="text-center pb-3" style="color: #676767;">&copy; 2025 Shella May Cuenca |
+                                National
+                                Gallery of Arts. All rights reserved.</div>
+                        </div>
+                    </div>
+                </div>
+    </section>
 
 
-  </section>
+
+    <!-- JS-->
+    <script src="data.js"></script>
+    
+    <script>
+
+        // Artwork Gallery
+        var artworkRow = document.getElementById("artworkRow");
+        for (var i = 0; i < artwork.length; i++) {
+            artworkRow.innerHTML += `
+                                    <div class="col-xxl-4 col-md-5 col-11 mt-5 ">
+                                    <div class="card p-1 bg-light card-holder border-0 position-relative overflow-hidden fade-on-scroll">
+                                        <button class="btn btn-light position-absolute top-0 end-0 m-2 px-3 rounded-5">
+                                            <i class="fas fa-expand"></i>
+                                        </button>
+                                        <img src="` + artwork[i].picture + `" class="card-img" id="artwork-` + i + `" alt="Artwork" style="height: auto; width: 100%;">
+                                        
+                                        <div class="card-img-overlay d-flex flex-column justify-content-end text-white text-start bg-dark bg-opacity-50">
+                                        <h5 class="fw-bold" style="color: #d59d2a ">` + artwork[i].title + `</h5>
+    
+                                        <div class="small">
+                                            <b>Artist: </b>` + artwork[i].artist + `<br>
+                                            <b>Year: </b>` + artwork[i].year + `<br>
+                                            <b>Medium: </b>` + artwork[i].medium + `
+                                        </div>
+    
+                                        <button class="btn btn-dark position-absolute top-0 end-0 m-2 px-3 rounded-5" onclick="openFull('artwork-` + i + `')">
+                                            <i class="fas fa-expand"></i>
+                                        </button>
+    
+                                        </div>
+                                    </div>
+                                    </div>`
+        }
+
+        // Sculpture Gallery
+        var sculptureRow = document.getElementById("sculptureRow");
+        for (var i = 0; i < sculpture.length; i++) {
+            sculptureRow.innerHTML += `
+                                <div class="col-xxl-3 col-md-5 col-11 mt-5">
+                                    <div class="card card-holder p-1 bg-light border-0 position-relative overflow-hidden fade-on-scroll">
+                                        <button class="btn btn-light position-absolute top-0 end-0 m-2 px-3 rounded-5">
+                                            <i class="fas fa-expand"></i>
+                                        </button>
+                                        <img src="` + sculpture[i].picture + `" class="card-img" alt="Sculpture" id="sculpture-` + i + `">
+    
+                                        <div class="card-img-overlay d-flex flex-column justify-content-end text-white text-start bg-dark bg-opacity-50 explore-text">
+                                            <h5 class="fw-bold" style="color: #d59d2a">` + sculpture[i].title + `</h5>
+                                            <div class="small">
+                                                <b>Artist: </b>` + sculpture[i].artist + `<br>
+                                                <b>Year: </b>` + sculpture[i].year + `<br>
+                                                <b>Medium: </b>` + sculpture[i].medium + `
+                                            </div>
+    
+                                        <button class="btn btn-dark position-absolute top-0 end-0 m-2 px-3 rounded-5" onclick="openFull('sculpture-` + i + `')">
+                                            <i class="fas fa-expand"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>`
+        }
+
+        sculptureRow.innerHTML = sculptureHTML;
+        function openFull(id) {
+            var img = document.getElementById(id);
+            if (img.requestFullscreen) {
+                img.requestFullscreen();
+            } else if (img.webkitRequestFullscreen) {
+                img.webkitRequestFullscreen();
+            } else if (img.msRequestFullscreen) {
+                img.msRequestFullscreen();
+            }
+        }
+    </script>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+
     <script>
-
         const faders = document.querySelectorAll('.fade-on-scroll');
-
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
