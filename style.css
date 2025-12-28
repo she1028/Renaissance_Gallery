@@ -12,6 +12,7 @@
      overflow-x: hidden;
      scroll-padding-top: 8em;
      scroll-behavior: smooth;
+     background-color: #212529;
  }
  .navbar {
      background-color: rgba(3, 11, 7, 0.95);
